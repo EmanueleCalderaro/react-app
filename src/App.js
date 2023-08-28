@@ -1,11 +1,13 @@
 import { useState } from "react";
 import './App.css';
+import Navbar from "./components/navbar";
 
 
 export default function App() {
 
   return (
     <div>
+      <Navbar />
       <h1 className="App-link">Welcome</h1>
       <Greeting name = "Emanuele" />
       <Change />

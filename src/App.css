@@ -15,9 +15,11 @@
   color: #282c34;
 }
 
-input[type=text] {
-  border: 2px solid #61dafb;
+input[type=text], input[type=password] {
+  border: 2px solid;
   border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 10px;
 }
 
 .App {
@@ -66,3 +68,32 @@ body {
   font-family: Sans-Serif;
   text-align: center;
 }
+
+
+
+/*navbar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+
+
+
+
+
+.container {
+  padding: 16px;
+}
+
