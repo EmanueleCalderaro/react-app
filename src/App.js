@@ -1,10 +1,12 @@
 import { useState } from "react";
+import './App.css';
+
 
 export default function App() {
 
   return (
     <div>
-      <h1>Welcome</h1>
+      <h1 className="App-link">Welcome</h1>
       <Greeting name = "Emanuele" />
       <Change />
     </div>
@@ -43,7 +45,7 @@ function Change(){
 
       <h2>Updated: {updated}</h2>
 
-      <button onClick={handleClick}>Update</button>
+      <button onClick={handleClick} className="Button">Update</button>
 
       <h2>Hello, {message}</h2>
       

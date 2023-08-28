@@ -1,3 +1,25 @@
+.Button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.Button:hover {
+  background-color: #61dafb;
+  color: #282c34;
+}
+
+input[type=text] {
+  border: 2px solid #61dafb;
+  border-radius: 4px;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +57,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  background-color: #282c34;
+  color: white;
+  padding: 40px;
+  font-family: Sans-Serif;
+  text-align: center;
 }
