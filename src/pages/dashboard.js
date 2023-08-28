@@ -6,7 +6,7 @@ export function Dashboard() {
     let isLoggedIn = true;
     let content;
     if (isLoggedIn) {
-        content = "Loggato";
+        content = "Logged in";
     } else {
         content = <Login />;
     }
