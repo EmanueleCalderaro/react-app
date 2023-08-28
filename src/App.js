@@ -9,6 +9,7 @@ export default function App() {
       <h1 className="App-link">Welcome</h1>
       <Greeting name = "Emanuele" />
       <Change />
+      <Counting />
     </div>
   );
 }
@@ -51,5 +52,17 @@ function Change(){
       
     </div>
   );
+}
+
+function Counting(){
+  const [count, setCount] = useState(0);
+  function handleClick () {
+    setCount(count + 1);
+  };
+  return(
+    <button onClick={handleClick} className="Button">Count</button>
+  );
+
+
 }
 
