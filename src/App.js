@@ -1,37 +1,53 @@
 import { useState } from "react";
 
 export default function App() {
-  const [count, setCount] = useState(0);
 
-  function handleClick() {
-    setCount(count + 1);
-  }
   return (
     <div>
-      <h1>Counters that update together</h1>
-      <MyButton count={count} onClick={handleClick} />
-      <MyButton count={count} onClick={handleClick} />
+      <h1>Welcome</h1>
+      <Greeting name = "Emanuele" />
+      <Change />
     </div>
   );
 }
 
+function Greeting ({ name }){
+  return <h2>Hello, {name} </h2>;
+}
 
-function MyButton({count, onClick}) {
 
-  if(count == 0){
-    return( 
-      <button onClick={onClick}>
-      Clicked {count} time
-      </button>
-    );
-  }
-  else{
-    return( 
-      <button onClick={onClick}>
-      Clicked {count} times
-      </button>
-    );
-  }
-  
+function Change(){
+  const [message, setMessage] = useState('');
+
+  const [updated, setUpdated] = useState(message);
+
+  const handleChange = (event) => {
+    setMessage(event.target.value);
+  };
+
+  const handleClick = () => {
+    setUpdated(message);
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        id="message"
+        name="message"
+        onChange={handleChange}
+        value={message}
+      />
+
+      <h2>Message: {message}</h2>
+
+      <h2>Updated: {updated}</h2>
+
+      <button onClick={handleClick}>Update</button>
+
+      <h2>Hello, {message}</h2>
+      
+    </div>
+  );
 }
 
