@@ -16,9 +16,6 @@ export default function App() {
 }
 
 
-
-
-
 function MyButton({count, onClick}) {
 
   if(count == 0){
