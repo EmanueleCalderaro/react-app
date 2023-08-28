@@ -40,6 +40,7 @@ function Change(){
         name="message"
         onChange={handleChange}
         value={message}
+        maxLength={10}
       />
 
       <h2>Message: {message}</h2>
