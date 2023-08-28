@@ -59,9 +59,18 @@ function Counting(){
   function handleClick () {
     setCount(count + 1);
   };
-  return(
-    <button onClick={handleClick} className="Button">Count</button>
-  );
+
+
+  if(count === 1){
+    return(
+      <button onClick={handleClick} className="Button">Clicked {count} time</button> 
+      );
+  }
+  else{
+    return(
+      <button onClick={handleClick} className="Button">Clicked {count} times</button>
+    );
+  }
 
 
 }
